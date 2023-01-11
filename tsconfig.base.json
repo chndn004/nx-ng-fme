@@ -14,7 +14,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nx-ng-fme/home": ["libs/home/src/index.ts"],
+      "@nx-ng-fme/layout": ["libs/layout/src/index.ts"],
+      "@nx-ng-fme/login": ["libs/login/src/index.ts"],
+      "@nx-ng-fme/products": ["libs/products/src/index.ts"],
+      "@nx-ng-fme/shared": ["libs/shared/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
