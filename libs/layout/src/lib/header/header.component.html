@@ -14,7 +14,7 @@
       <ng-template #loggedIn>
         <span class="font-bold text-white" *ngIf="user$ | async as user">
           <span>Welcome, {{ user.name }}!</span>
-          <br/><span><a href="javascript(0)" (click)="logOut()">Logout</a></span>
+          <br/><span><a href="#" (click)="logOut()">Logout</a></span>
         </span>
       </ng-template>
     </div>

@@ -16,6 +16,7 @@ export class HeaderComponent {
 
   logOut(){
     this.authService.setUser("");
-    this.router.navigateByUrl('/login');
+    this.isLoggedIn$ = this.user$.pipe(map((user) => false));
+    this.router.navigateByUrl('/home');
   }
 }

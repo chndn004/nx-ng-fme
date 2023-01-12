@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { AuthGuard } from '@nx-ng-fme/shared'
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { RouterModule } from '@angular/router';
@@ -25,6 +25,7 @@ import { LayoutModule } from '@nx-ng-fme/layout';
         {
           path: 'products',
           loadComponent: () => import('@nx-ng-fme/products').then((m) => m.ProductsComponent),
+          canActivate: [AuthGuard]
         },
         {
           path: 'login',

@@ -29,7 +29,7 @@ export class LoginComponent {
       return;
     }
 
-    if (this.password !== 'password') {
+    if (this.password !== 'passwordpassword') {
       this.error = 'The password is password...';
       return;
     }
