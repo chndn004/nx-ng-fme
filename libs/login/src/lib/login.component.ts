@@ -30,7 +30,7 @@ export class LoginComponent {
     }
 
     if (this.password !== 'passwordpassword') {
-      this.error = 'The password is password...';
+      this.error = 'The password is passwordpassword';
       return;
     }
 
