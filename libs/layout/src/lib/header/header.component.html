@@ -10,7 +10,13 @@
       <a class="py-2 d-none d-md-inline-block nav-link disabled" href="#">Enterprise</a>
       <a class="py-2 d-none d-md-inline-block nav-link disabled" href="#">Support</a>
       <a class="py-2 d-none d-md-inline-block nav-link disabled" href="#">Pricing</a>
-      <a class="py-2 d-none d-md-inline-block" routerLink="login">Login</a>
+      <a class="py-2 d-none d-md-inline-block" routerLink="login" *ngIf="(isLoggedIn$ | async) === false; else loggedIn">Login</a>
+      <ng-template #loggedIn>
+        <span class="font-bold text-white" *ngIf="user$ | async as user">
+          <span>Welcome, {{ user.name }}!</span>
+          <br/><span><a href="javascript(0)" (click)="logOut()">Logout</a></span>
+        </span>
+      </ng-template>
     </div>
   </nav>
 </header>
